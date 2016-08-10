@@ -1,6 +1,10 @@
 'use strict';
 const electron = require('electron');
 const app = electron.app;
+const menubar = require('menubar');
+
+
+const mb = menubar({width: 600});
 
 // adds debug features like hotkeys for triggering dev tools and reload
 require('electron-debug')();
@@ -38,6 +42,11 @@ app.on('activate', () => {
 	}
 });
 
-app.on('ready', () => {
-	mainWindow = createMainWindow();
+// app.on('ready', () => {
+// 	mainWindow = createMainWindow();
+// });
+
+mb.on('ready', () =>{
+	console.log('menubar is loading');
 });
+

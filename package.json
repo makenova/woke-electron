@@ -1,0 +1,45 @@
+{
+  "name": "woke",
+  "productName": "Woke",
+  "version": "0.0.0",
+  "description": "My super app",
+  "license": "MIT",
+  "repository": "liveyourheart/woke",
+  "author": {
+    "name": "",
+    "email": "",
+    "url": "github.com/liveyourheart"
+  },
+  "scripts": {
+    "test": "xo",
+    "start": "electron .",
+    "build": "electron-packager . --out=dist --app-version=$npm_package_version --prune --asar --overwrite --all"
+  },
+  "files": [
+    "index.js",
+    "index.html",
+    "index.css"
+  ],
+  "keywords": [
+    "electron-app",
+    "electron"
+  ],
+  "dependencies": {
+    "electron-debug": "^1.0.0",
+    "eslint": "^3.2.2",
+    "menubar": "^5.1.0"
+  },
+  "devDependencies": {
+    "devtron": "^1.1.0",
+    "electron-packager": "^7.0.0",
+    "electron-prebuilt": "^1.0.1",
+    "xo": "^0.15.0"
+  },
+  "xo": {
+    "esnext": true,
+    "envs": [
+      "node",
+      "browser"
+    ]
+  }
+}

@@ -26,6 +26,7 @@
   ],
   "dependencies": {
     "electron-debug": "^1.0.0",
+    "eslint": "^3.2.2",
     "menubar": "^5.1.0"
   },
   "devDependencies": {

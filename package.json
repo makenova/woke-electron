@@ -31,9 +31,11 @@
     "babelify": "^7.3.0",
     "electron-debug": "^1.0.0",
     "eslint": "^3.2.2",
+    "material-ui": "^0.15.4",
     "menubar": "^5.1.0",
     "react": "^15.3.0",
-    "react-dom": "^15.3.0"
+    "react-dom": "^15.3.0",
+    "react-tap-event-plugin": "^1.0.0"
   },
   "devDependencies": {
     "devtron": "^1.1.0",

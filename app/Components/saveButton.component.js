@@ -4,7 +4,9 @@ import RaisedButton from 'material-ui/RaisedButton';
 class SaveButton extends React.Component {
     render(){
         const style = {
-            margin: "auto"
+            margin: "auto",
+            display: "block",
+            width: "20%"
         };
         return (
         <div className="save-button">

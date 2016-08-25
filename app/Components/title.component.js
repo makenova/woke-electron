@@ -1,10 +1,18 @@
 import React from 'react';
+import AppBar from 'material-ui/AppBar';
 
 class Title extends React.Component {
     render(){
+        const style={
+            
+        }
         return (
         <div className="title">
-            <h1>Woke</h1>
+            <AppBar
+                style={style}
+                title="Woke"
+                showMenuIconButton={false}
+            />
         </div>
         )
 

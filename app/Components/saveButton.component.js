@@ -6,12 +6,12 @@ class SaveButton extends React.Component {
         const style = {
             margin: "auto",
             display: "block",
-            width: "20%"
+            width: "20%",
         };
         
         return (
         <div className="save-button">
-            <RaisedButton label="Save" primary={true} style={style} backgroundColor="#f3f3f3"/>
+            <RaisedButton label="Save" secondary={true} style={style}/>
         </div>
         )
 

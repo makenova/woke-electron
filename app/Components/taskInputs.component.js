@@ -1,29 +1,34 @@
 import React from 'react';
 import TextField from 'material-ui/TextField';
-import SelectField from 'material-ui/SelectField';
-import MenuItem from 'material-ui/MenuItem';
 
 class TaskInputs extends React.Component {
 
     render(){
         const style = {
-            margin: "10px"
+            margin: "15px",
+            display: "inline-block",
+            textAlign: "Center",
+            width: "250px"
         };
         
         const divStyle = {
-            margin: "auto",
-            display: "block"
+            marginLeft: "auto",
+            marginRight: "auto",
+            display: "block",
+            width: "95%",
+            textAlign: "center"
         }
 
         return (
         <div className="task-inputs">
-   
-        <TextField style={style}
-            floatingLabelText = "Task"
-           /> 
-           <TextField style={style}
-            floatingLabelText = "Category"
-           />
+            <div style={divStyle}>
+                <TextField style={style}
+                    floatingLabelText = "Task"
+                /> 
+                <TextField style={style}
+                    floatingLabelText = "Category"
+                />
+           </div>
 
         </div>
         )

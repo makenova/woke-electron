@@ -13,7 +13,7 @@
   "scripts": {
     "test": "xo",
     "start": "electron .",
-    "watch": "watchify app/app.js -t babelify -o public/js/bundle.js --debug --verbose",
+    "watch": "watchify ./app/app.js -t babelify -o public/js/bundle.js --debug --verbose",
     "build": "electron-packager . --out=dist --app-version=$npm_package_version --prune --asar --overwrite --all"
   },
   "files": [
@@ -33,6 +33,7 @@
     "eslint": "^3.2.2",
     "material-ui": "^0.15.4",
     "menubar": "^5.1.0",
+    "moment": "^2.15.0",
     "react": "^15.3.0",
     "react-dom": "^15.3.0",
     "react-tap-event-plugin": "^1.0.0"
@@ -41,6 +42,7 @@
     "devtron": "^1.1.0",
     "electron-packager": "^7.0.0",
     "electron-prebuilt": "^1.0.1",
+    "watchify": "^3.7.0",
     "xo": "^0.15.0"
   },
   "xo": {

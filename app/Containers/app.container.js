@@ -1,5 +1,6 @@
 import React from 'react';
 import moment from 'moment';
+import convert from '@makenova/panda';
 
 import Title            from '../components/title.component'
 import Timer            from '../components/timer.component'
@@ -12,11 +13,14 @@ class AppContainer extends React.Component {
   constructor(props) {
     super(props)
 
+    const testTimeValue = 5;
+
     this.state = {
-      initialTime: new Date(),
+      initialTime: testTimeValue,
       timer: 0,
-      elapsed: 0,
-      running: true,
+      currentTime: testTimeValue,
+      running: false,
+      percentTime: 0
     }
 
     this.tick = this.tick.bind(this);
@@ -34,8 +38,21 @@ class AppContainer extends React.Component {
   }
 
   tick() {
-    const elapsed = moment(new Date() - this.state.initialTime).format("mm : ss");
-    this.setState({ elapsed })
+    if (!this.state.running) return;
+
+    const state = this.state;
+    const currentTime = state.currentTime - 1;
+    const percentTime = (currentTime / state.initialTime) * 100;
+
+    if (state.currentTime <= 0){
+      return this.setState({
+        percentTime,
+        currentTime: state.initialTime,
+        running: false
+      });
+    }
+
+    this.setState({ currentTime, percentTime })
   }
 
   toggleTimer() {
@@ -48,8 +65,8 @@ class AppContainer extends React.Component {
     return (
       <div>
         <Title />
-        <Timer />
-        <TimeInput elapsed={this.state.elapsed} />
+        <Timer value={this.state.percentTime} />
+        <TimeInput elapsed={convert(this.state.currentTime)} />
         <TimeControls
           running={this.state.running}
           toggleTimer={this.toggleTimer}

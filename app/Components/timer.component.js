@@ -11,7 +11,12 @@ class Timer extends React.Component {
         }
         return (
         <div className="timer">
-           <LinearProgress mode="determinate" value="80" color={pinkA200} style={style} />
+           <LinearProgress
+            mode="determinate"
+            value={this.props.value}
+            color={pinkA200}
+            style={style}
+          />
         </div>
         )
 
